@@ -1,0 +1,40 @@
+.blog-block{
+    @apply -mx-5 px-5  py-8 relative bg-lightblue;
+    
+    @screen md {
+        @apply -mx-10 pl-10 pr-10;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @screen lg {
+        padding-top: 99px;
+        padding-bottom: 111px;
+        border-radius: 100px 0;
+    }
+    @media (min-width:1317px){
+        margin-left: calc((100vw - 1236px) * -0.5);
+        margin-right: calc((100vw - 1236px) * -0.5);
+        padding-right: calc((100vw - 1236px) * 0.5);
+        padding-left: calc((100vw - 1236px) * 0.5);
+    }
+    h2 {
+        margin-bottom: 24px;
+        @screen md {
+          margin-bottom: 40px;
+        }
+        @screen lg {
+          margin-bottom: 57px;
+        }
+      }
+    .carousel-footer {
+        margin-top: 61px;
+        @apply relative z-10;
+        @screen md {
+          margin-top: 80px;
+        }
+        @screen lg {
+          @apply w-1/2 ml-auto absolute right-0 m-0;
+          top: -120px;
+        }
+      }
+}

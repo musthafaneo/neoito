@@ -1,0 +1,345 @@
+.what-block{
+    &-head{
+        h2{
+            @apply text-primary text-32 mt-0;
+            line-height: .94;
+            margin-bottom: 37px;
+            @screen md {
+            @apply text-100;
+            margin-bottom: 56px;
+            }
+            @screen lg{
+            margin-bottom: 47px;
+            }
+        }
+        h3 {
+            @apply font-sans text-orange mb-3 text-26 font-normal;
+            line-height: 1.155;
+            
+            @screen md {
+            @apply text-36;
+            line-height: 0.94;
+            }
+        }
+        p {
+            @apply text-secondary text-16 mb-5;
+            line-height: 1.4;
+            @screen md {
+                @apply text-20 mb-9;
+            }
+            @screen lg {
+                @apply text-32;                
+                margin-bottom: 47px;
+            }
+        }
+    }
+    &-items{
+        @apply flex flex-wrap -mx-2.5;
+        
+    }
+    &-item{
+        @apply px-2.5 mb-5;
+    }
+    &.style-1{
+        margin: 0 -1.25rem;
+        padding: 40px 1.25rem 44px;  
+        @screen md {
+            padding-bottom: 60px;
+            padding-top: 129px;
+            margin: 0 -2.5rem;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+        }
+
+        @media (min-width:1317px){
+            margin-left: calc((100vw - 1236px) * -0.5);
+            margin-right: calc((100vw - 1236px) * -0.5);
+            padding-right: calc((100vw - 1030px) * 0.5);
+            padding-left: calc((100vw - 1030px) * 0.5);
+        }
+
+        .what-block{
+            &-head{
+                @screen lg {
+                    @apply flex items-end -mx-2.5;
+                }
+                &-left{
+                    @screen lg {
+                        @apply w-1/2 px-2.5;
+                    }
+                }
+                &-right{
+                    @screen lg {
+                        @apply w-1/2 px-2.5;
+                    }
+                }
+            }
+            &-item{
+                @apply w-full flex;                
+                @screen md {
+                    @apply w-1/2;
+                }
+                &-in{
+                    @apply bg-lightblue p-5 flex grow flex-col;
+                    border-radius: 10px;
+                    @screen lg {
+                        padding: 34px;
+                    }
+                }
+                @screen lg {
+                    &:first-child{
+                        .what-block-item-in{
+                            border-top-left-radius: 60px;
+                        }
+                    }
+                    &:last-child{
+                        .what-block-item-in{
+                            border-bottom-right-radius: 60px;
+                        }
+                    }
+                }
+                span{
+                    @apply flex mb-2.5;
+                    align-items: center;
+                    height: 50px;
+                    @screen lg {
+                        @apply mb-5;
+                    }
+                }
+                h3{
+                    @apply text-28 mt-0 mb-3 font-medium;
+                    line-height: 1.2;
+                    @screen md {
+                        @apply text-40 mb-5;
+                    }
+                }
+                p{
+                    @apply text-secondary mb-0;
+                    line-height: 1.7;
+                    @screen md {
+                        @apply text-20;
+                    } 
+                }
+            }
+        }
+    }
+    &.style-2{
+        margin: 0 -1.25rem;
+        padding: 40px 1.25rem 44px;  
+        @screen md {
+            padding-bottom: 45px;
+            padding-top: 91px;
+            margin: 0 -2.5rem;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+        }
+
+        @media (min-width:1317px){
+            margin-left: calc((100vw - 1236px) * -0.5);
+            margin-right: calc((100vw - 1236px) * -0.5);
+            padding-right: calc((100vw - 1236px) * 0.5);
+            padding-left: calc((100vw - 1236px) * 0.5);
+        }
+
+        .what-block{
+            &-item{
+                @apply w-full flex;                
+                @screen md {
+                    @apply w-1/2;
+                }
+                &-in{
+                    @apply p-5 flex grow flex-col;
+                    border: 1px solid #C2CBD9;
+                    border-radius: 30px;
+                    @screen lg {
+                        padding: 32px;
+                    }
+                }
+                span{
+                    @apply flex mb-2.5;
+                    align-items: center;
+                    height: 50px;
+                    @screen lg {
+                        @apply mb-5;
+                    }
+                }
+                h3{
+                    @apply text-28 mt-0 mb-3 font-medium;
+                    line-height: 1.2;
+                    @screen md {
+                        @apply text-40 mb-5;
+                    }
+                }
+                p{
+                    @apply text-secondary mb-0;
+                    line-height: 1.7;
+                    @screen md {
+                        @apply text-20;
+                    } 
+                }
+            }
+        }
+    }
+    &.style-3{
+        margin: 0 -1.25rem;
+        padding: 40px 1.25rem 44px;  
+        @screen md {
+            padding-bottom: 45px;
+            padding-top: 60px;
+            margin: 0 -2.5rem;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+        }
+        @screen lg{
+            padding-bottom: 70px;
+            @apply relative;
+            &::before{
+                content: "";
+                width: 772px;
+                height: 772px;
+                @apply absolute bg-lightblue rounded-full;
+                top: 70px;
+                right: -199px;
+            }
+        }
+
+        @media (min-width:1317px){
+            margin-left: calc((100vw - 1236px) * -0.5);
+            margin-right: calc((100vw - 1236px) * -0.5);
+            padding-right: calc((100vw - 1236px) * 0.5);
+            padding-left: calc((100vw - 1236px) * 0.5);
+        }
+        h2{
+            @apply mb-3;
+        }
+        .what-block{
+            &-head{
+                @screen lg {
+                    margin-bottom: 56px;
+                }
+                p{
+                    max-width: 620px;
+                    @apply text-16;
+                    @screen lg {
+                        @apply text-20;
+                    }
+                }
+            }
+            &-item{
+                @apply w-full flex;                
+                @screen md {
+                    @apply w-1/3;
+                }
+                @screen lg {
+                    @apply w-1/4 relative;
+                }
+                &-in{
+                    @apply px-5 pb-5 flex grow flex-col relative bg-white;
+                    border: 1px solid #D8E7FF;
+                    border-radius: 50px 10px;
+                    padding-top: 80px;
+                    @screen lg {
+                        padding: 120px 32px 26px;
+                    }
+                }
+                span{
+                    @apply flex items-center justify-center absolute left-0 top-0;
+                    background-color: #E3EEFF;
+                    width: 105px;
+                    height: 110px;
+                    border-radius: 50px 0;
+                    @screen lgd{
+                        transform: scale(0.65);
+                        transform-origin: left top;
+                    }
+                }
+                h3{
+                    @apply text-28 mt-0 mb-3;
+                    line-height: 1;
+                    @screen md {
+                        @apply text-28;
+                    }
+                }
+                p{
+                    @apply text-secondary mb-0;
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+    &.style-4{
+        margin: 0 -1.25rem;
+        padding: 40px 1.25rem 44px;  
+        @screen md {
+            padding-bottom: 45px;
+            padding-top: 60px;
+            margin: 0 -2.5rem;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+        }
+        @screen lg{
+            padding-bottom: 70px;
+            padding-top: 80px;
+            @apply relative;            
+        }
+        @screen xl{
+            padding-top: 134px;
+        }
+
+        @media (min-width:1317px){
+            margin-left: calc((100vw - 1236px) * -0.5);
+            margin-right: calc((100vw - 1236px) * -0.5);
+            padding-right: calc((100vw - 1236px) * 0.5);
+            padding-left: calc((100vw - 1236px) * 0.5);
+        }
+        h2{
+            @screen lg {
+                margin-bottom: 56px;
+            }
+        }
+
+        .what-block{
+            &-item{
+                @apply w-full flex;                
+                @screen md {
+                    @apply w-1/3;
+                }
+                @screen lg {
+                    @apply w-1/4 relative;
+                    min-height: 374px;
+                }
+                &-in{
+                    @apply flex grow flex-col relative bg-white overflow-hidden text-center;
+                    border: 1px solid #C5DCFD;
+                    border-radius: 50px 50px 50px 5px;
+                    
+                }
+                &-cnt{
+                    @apply p-5;
+                    @screen lg {
+                        @apply px-8 py-7;
+                    }
+                }
+                span{
+                    @apply flex items-center justify-center bg-orange w-full;
+                    height: 90px;
+                    @screen lg{
+                        height: 110px;
+                    }
+                }
+                h3{
+                    @apply text-28 mt-0 mb-3;
+                    line-height: 1;
+                    @screen md {
+                        @apply text-28;
+                    }
+                }
+                p{
+                    @apply text-secondary mb-0;
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+   
+}

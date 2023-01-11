@@ -1,0 +1,374 @@
+.verticals-block{
+    @apply -mx-5 px-5  py-8 relative;
+    
+    @screen md {
+        @apply -mx-10 pl-10 pr-10;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @screen lg {
+        padding-top: 95px;
+        padding-bottom: 95px;
+    }
+    @media (min-width:1317px){
+        margin-left: calc((100vw - 1236px) * -0.5);
+        margin-right: calc((100vw - 1236px) * -0.5);
+        padding-right: calc((100vw - 1236px) * 0.5);
+        padding-left: calc((100vw - 1236px) * 0.5);
+    }
+
+    &-head {
+        @apply text-center;
+        @screen mdd {
+          
+          padding-bottom: 9px;
+        }
+        @screen md {
+            .style-1 &{
+                @apply text-left;
+            }
+        }
+        @screen lg {
+          .style-1 &{
+              width: 55%;
+          }
+          padding-bottom: 30px;
+        }
+      }
+      &-items {
+        .slick {
+          &-list {
+            margin-right: -20px;
+            margin-left: -20px;
+            padding-right: 93px;
+            padding-left: 93px;
+            @screen mdd {
+              margin-bottom: -100px;
+            }
+            @screen md {
+              margin-left: -8px;
+              margin-right: -40px;
+              padding-right: 60px;
+              padding-left: 0;
+            }
+            @screen lg {
+              @apply px-0 -mx-px;
+              border-radius: 60px 0 60px 0;
+            }
+          }
+          &-slide {
+            padding-left: 5px;
+            padding-right: 5px;
+            position: relative;
+            @screen mdd {
+              padding-bottom: 100px;
+            }
+            @screen md {
+              padding-left: 8px;
+              padding-right: 8px;
+            }
+            @screen lg {
+              padding-left: 2px;
+              padding-right: 2px;
+            }
+            &.slick-current > div {
+              @apply relative;
+              @screen mdd {
+                &::before {
+                  content: "";
+                  @apply absolute;
+                  left: 10%;
+                  width: 80%;
+                  height: 16px;
+                  background: url(../images/shape.svg) no-repeat 0 bottom;
+                  background-size: cover;
+                  bottom: 5px;
+                  filter: blur(41.623px);
+                }
+              }
+            }
+          }
+        }
+      }
+      &-item {
+        
+            background-color: #f6f6f7;
+            @apply relative;
+            @screen mdd {
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14);
+            }
+            .style-1 &{
+                @screen lg {
+                    @apply flex items-center;
+                    border-radius: 0;
+                    &::after {
+                        content: "";
+                        @apply absolute inset-0 transition-all duration-300 opacity-0;
+                        background: linear-gradient(
+                        180deg,
+                        #282a37 1.59%,
+                        rgba(40, 42, 55, 0.95) 100%
+                        );
+                    }
+                }
+            }
+            @screen lgd {
+                border-radius: 40px 10px 40px 10px;
+            }
+            .wp-svg-img {
+            height: 50px;
+            @apply mb-5;
+            @apply flex items-center;
+            svg {
+                @apply max-h-full h-auto;
+                path, polygon {
+                    fill: #f36d45;
+                }
+                @screen lg {
+                    .style-1 &{
+                        @apply transition-all duration-300;
+                    }
+                }
+            }
+            }
+            h3 {
+                @apply text-26 text-black;
+                line-height: 1.2;
+                @screen lgd {
+                    @apply text-center;
+                }
+                .style-1 &{
+                    @screen lg {
+                        @apply transition-all duration-300 relative;
+                        min-height: 63px;
+                    }
+                }
+            }
+            &:hover {
+                .style-1 &{
+                    @screen lg {
+                        &::after {
+                        @apply opacity-100;
+                        }
+                
+                        .wp-svg-img {
+                        svg {
+                            path, polygon{
+                                fill: #fff;
+                                stroke: #fff;
+                            }
+                        }
+                        }
+                        h3 {
+                        @apply text-white;
+                        &::after {
+                            @apply opacity-100;
+                            bottom: -38px;
+                        }
+                        }
+                    }
+                    }
+                }
+            &-in {
+                @apply flex justify-center relative flex-grow flex-col;
+                .style-1 &{
+                    @screen lg {
+                        @apply z-10;
+                        min-height: 346px;
+                        padding: 29px;
+                    }
+                }
+                @screen lgd {
+                    padding: 40px 10px 40px;
+                    min-height: 205px;
+                    @apply items-center text-center;
+                }
+            }
+      }
+      .carousel-footer {
+        @apply relative z-10 hidden;        
+        @screen lgd {
+          margin-top: 30px;
+          @apply flex;
+        }
+      }
+      &.style-1 {
+        .carousel-footer {
+            @apply flex;
+            @screen lg {
+                @apply absolute;
+                top: 103px;
+                right: 40px;
+                width: 42.18%;
+              }
+        } 
+      }
+      &.style-2, &.style-3{
+        .verticals-block{
+          &-head{
+            @screen lg {
+              max-width: 730px;
+              @apply mx-auto;
+            }
+          }
+          @screen lg {
+            &-items{
+                @apply flex flex-wrap -mx-2.5;
+            }
+            &-item{
+              @apply px-2.5 flex w-1/3 mb-5;
+              background: none;
+              &-in{
+                background: #F6F6F7;
+                border-radius: 10px;
+                @apply flex gap-6 items-center w-full transition-all duration-300;
+                padding: 27px 24px;
+                span{
+                  width: 80px;
+                  height: 80px;
+                  min-width: 80px;
+                  @apply bg-white flex items-center justify-center mb-0;
+                  border-radius: 25px;
+                  svg{
+                    max-width: 50px;
+                    height: auto;
+                  }
+                }
+                h3{
+                  @apply transition-all duration-300;
+                }
+                &:hover{
+                  @apply bg-primary;
+                  h3{
+                    @apply text-white;
+                  }
+                }
+              }
+            }
+          }
+          @screen xl{
+            &-item{
+              @apply w-1/4;
+            }
+          }
+        }
+      }
+      &.style-2{
+        .verticals-block-item-in{
+          @screen lg {
+            @apply flex-row;
+          }
+        }
+      }
+      &.style-4{
+        .postid-1372 &{
+          .verticals-block-head{
+            @apply max-w-full;
+          }
+        }
+        .verticals-block{
+          &-head{
+            @screen lg {
+              max-width: 730px;
+              @apply mx-auto;
+            }
+          }
+          @screen lg {
+            &-items{
+                @apply flex flex-wrap -mx-2.5;
+            }
+            &-item{
+              @apply px-2.5 flex w-1/4 mb-5;
+              background: none;
+              &-in{
+                background: #F6F6F7;
+                border: 1px solid #F6F6F7;
+                border-radius: 10px;
+                @apply flex flex-col-reverse gap-6 items-center w-full transition-all duration-300 justify-between;
+                padding: 24px;
+                span{
+                  @apply flex items-center justify-between w-full mb-0;
+                  &::before{
+                    content: "";
+                    width: 24px;
+                    height: 12px;
+                    background: url(../../images/arrow.svg) no-repeat;
+                  }
+                  svg{
+                    max-width: 50px;
+                    height: auto;
+                  }
+                }
+                h3{
+                  @apply transition-all duration-300;
+                }
+                &:hover{
+                  @apply border-orange bg-white;
+                  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15);
+                }
+              }
+            }
+          }
+          @screen xl{
+            &-item{
+              @apply w-1/6;
+            }
+          }
+        }
+      }
+      &.style-5{
+        .postid-1328 &{
+          @apply bg-lightblue;
+        }
+        .verticals-block{
+          &-head{
+            @screen lg {
+              max-width: 753px;
+              @apply mx-auto;
+            }
+            p{
+              @apply text-secondary;
+              line-height: 1.25;
+              @screen lg {
+                @apply text-18;
+              }
+            }
+          }
+          @screen lg {
+            &-items{
+                @apply flex flex-wrap -mx-2.5;
+            }
+            &-item{
+              @apply px-2.5 flex w-1/4 mb-5;
+              background: none;
+              &-in{
+                border-radius: 30px;
+                @apply flex flex-col items-center gap-3 w-full transition-all duration-300;
+                padding: 21px 10px 18px;
+                span{
+                  @apply flex items-center justify-center mb-0 bg-orange rounded-full;
+                 width: 75px;
+                 height: 75px;
+                 svg{
+                   path, polygon{
+                     @apply fill-white;
+                   }
+                 }
+                }
+                &:hover{
+                  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+                  .postid-1328 &{
+                    @apply bg-white;
+                  }
+                }
+              }
+            }
+          }
+          @screen xl{
+            &-item{
+              @apply w-1/6;
+            }
+          }
+        }
+      }
+}

@@ -1,0 +1,29 @@
+.expertise-block{
+    margin: 0 -1.25rem;
+    padding: 40px 1.25rem 44px;  
+
+    @screen md {
+        padding-bottom: 76px;
+        padding-top: 96px;
+        margin: 0 -2.5rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    @media (min-width:1317px){
+        margin-left: calc((100vw - 1236px) * -0.5);
+        margin-right: calc((100vw - 1236px) * -0.5);
+        padding-right: calc((100vw - 1236px) * 0.5);
+        padding-left: calc((100vw - 1236px) * 0.5);
+    }
+    .service-exp-head{
+        @screen lg{
+            width: 37%;
+        }
+    }
+    .service-exp-item{
+        @screen lg{
+            width: 33.333%;
+        }
+    }
+   
+}

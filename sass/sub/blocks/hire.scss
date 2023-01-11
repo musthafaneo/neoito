@@ -1,0 +1,94 @@
+.hire-block{
+    @apply -mx-5 px-5  py-8 relative bg-lightblue;
+    
+    @screen md {
+        @apply -mx-10 pl-10 pr-10;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @screen lg {
+        padding-top: 104px;
+        padding-bottom: 129px;
+        border-radius: 100px 0;
+    }
+    @media (min-width:1317px){
+        margin-left: calc((100vw - 1236px) * -0.5);
+        margin-right: calc((100vw - 1236px) * -0.5);
+        padding-right: calc((100vw - 1236px) * 0.5);
+        padding-left: calc((100vw - 1236px) * 0.5);
+    }
+    
+    h2{
+        @apply mx-auto text-center;
+        @screen md {
+            margin-bottom: 30px;
+        }
+        @screen lg {
+            margin-bottom: 60px;
+        }
+    }
+    &-items{
+        @apply flex flex-wrap -mx-px;
+        counter-reset: number;
+    }
+    &-item{
+        @apply px-px w-full flex;
+        margin-bottom: 2px;
+        counter-increment: number;
+        @screen md {
+            @apply w-1/2;
+        }
+        @screen lg {
+            @apply w-1/4;
+        }
+        &-in{
+            @apply bg-white flex grow flex-col;
+            border-radius: 10px;
+            padding: 20px;
+            @screen lg {
+                padding: 40px 20px;
+            }
+            &::before{
+                content: counters(number, "", decimal-leading-zero);
+                @apply text-orange font-serif text-36 mb-3 font-bold;
+                @screen md {
+                    @apply text-44;
+                    margin-bottom: 12px;
+                }
+            }
+            p{
+                @apply text-black text-20;
+                line-height: 1.4;
+                margin-bottom: 16px;
+                @screen md {
+                    @apply text-28;
+                    margin-bottom: 23px;
+                }
+            }
+            img{
+                margin-top: auto;
+                @screen mdd{
+                    max-width: 70%;
+                    margin: 0 auto;
+                }
+            }
+            @screen md {
+                padding: 62px 16px 58px 31px;
+            }
+        }
+       
+        @screen lg {
+            &:first-child{
+                .hire-block-item-in{
+                    border-top-left-radius: 50px;
+                }
+            }
+            &:last-child{
+                .hire-block-item-in{
+                    border-bottom-right-radius: 50px;
+                }
+            }
+        }
+    }
+    
+}

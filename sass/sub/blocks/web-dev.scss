@@ -1,0 +1,46 @@
+.web-dev-block{
+    @apply -mx-5 pl-5 pr-5 relative bg-lightblue;
+    padding-top: 41px;
+    padding-bottom: 43px;
+    @screen md {
+        @apply -mx-10 pl-10 pr-10;
+        padding-top: 96px;
+        padding-bottom: 97px;
+    }
+    @media (min-width:1317px){
+        margin-left: calc((100vw - 1236px) * -0.5);
+        margin-right: calc((100vw - 1236px) * -0.5);
+        padding-right: calc((100vw - 1236px) * 0.5);
+        padding-left: calc((100vw - 1236px) * 0.5);
+    }
+    &-head {
+        @apply text-center mb-8;
+      }
+    .carousel-footer {
+        margin-top: 38px;
+        @apply relative z-10;
+    }
+    .service-verticals-items{
+        .slick{
+            &-track{
+                @apply flex;
+            }
+            &-slide{
+                @apply flex h-auto;
+                > div {
+                    @apply flex;
+                  }
+            }
+        }
+    }
+    .service-verticals-item{
+        
+        display: flex !important;
+        &-in{
+            @screen lg{
+                min-height: 360px;
+                padding-top: 55px;
+            }
+        }
+    }
+}

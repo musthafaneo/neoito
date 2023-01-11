@@ -1,0 +1,177 @@
+.playbook-banner {
+    background: linear-gradient(180deg, #e7f1f7 0%, rgba(231, 241, 247, 0) 100%);
+    padding: 147px 0 146px;
+
+    @screen md {
+        padding: 200px 0 40px;
+    }
+
+    @screen lg {
+        padding: 174px 0 221px;
+    }
+
+    &-main {
+        @apply relative;
+
+        @screen lg {
+            @apply flex items-end justify-between -mx-4;
+        }
+    }
+
+    &-left {
+        @apply relative;
+
+        @screen lg {
+            width: 53%;
+            @apply px-4;
+        }
+    }
+
+    &-right {
+        @screen lg {
+            width: 47%;
+            @apply px-4;
+        }
+
+        @screen lgd {
+            @apply mt-5;
+        }
+
+        img {
+            @apply inline-block;
+        }
+    }
+
+    h1 {
+        @apply mb-6;
+        font-size: 4.5rem;
+    }
+
+    p {
+        @apply text-secondary text-22 mb-11;
+        line-height: 1.54
+
+        // @screen md {
+        //     @apply text-32 mb-14;
+        //     line-height: 1.54;
+        // }
+    }
+
+    .scroll-svg {
+        @apply right-0;
+        bottom: -210px;
+    }
+}
+
+.playbook-content {
+    &-main {
+        @screen lg {
+            @apply flex items-start justify-between;
+            margin-bottom: 50px;
+        }
+    }
+
+    &-left {
+        @apply hidden;
+
+        @screen lg {
+            @apply absolute h-full block;
+
+            &.s {
+                position: fixed;
+                top: 100px;
+                z-index: 9999999999;
+            }
+
+        }
+
+        .links-toc-wrap {
+            background: #33323A;
+            padding: 20px;
+            margin-bottom: 83px;
+            width: max-content;
+
+            @screen lg {
+                margin-bottom: 0px;
+            }
+        }
+
+
+        .links-toc-item {
+            &.active {
+                a {
+                    @apply text-orange;
+                }
+            }
+
+            a {
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 27px;
+                letter-spacing: 0px;
+                text-align: left;
+                @apply text-white
+            }
+        }
+
+
+    }
+
+    &-right {
+
+        .content-wrapper{
+            flex-direction: column;
+        }
+
+        @screen lg {
+            .content-wrapper{
+                flex-direction:row;
+            }
+            @apply relative;
+            padding-left: 20%;
+            flex-direction: column;
+            .blog-item-playbook{
+display:flex;
+flex-direction:column;
+            }
+        }
+
+        
+
+        &-content {
+            width: 100%;
+
+            @screen lg {
+                width: 80%;
+                margin-right: 7%;
+            }
+
+        }
+
+        &-also-read {
+
+            //@apply hidden;
+
+            @screen lg {
+                @apply block;
+                width: 20%;
+            }
+
+            .also-read {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.playbook-blog-item {
+    padding: 10px;
+
+    h3{
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    
+}

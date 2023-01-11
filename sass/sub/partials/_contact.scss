@@ -1,0 +1,404 @@
+.contact-banner {
+  @screen md {
+    @apply px-0;
+  }
+
+  .b-path-anim-2 {
+    @screen lg {
+      transform: translateX(-50%);
+    }
+  }
+
+  .service-banner-main {
+    @screen lg {
+      align-items: center;
+    }
+  }
+
+  .vjs-poster {
+    background-color: transparent;
+  }
+
+  .video-js {
+    background-color: transparent;
+  }
+
+  .vjs-big-play-button {
+    display: none;
+  }
+
+  .my-video-dimensions {
+    width: auto;
+    height: 300px;
+  }
+
+  @screen lg {
+    .my-video-dimensions {
+      width: 100%;
+      height: 395px;
+    }
+
+  }
+
+
+  // .vjs-fluid {
+  //   padding-top: 71%;
+  // }
+  .service-banner-right {
+    @screen lg {
+      width: 39.3333%;
+    }
+  }
+
+  .button{
+    margin: 0px auto;
+    display: block;
+    margin-top: 50px;
+    width: max-content;
+  }
+
+}
+
+.contact-testi {
+  padding: 66px 0 60px;
+
+  @screen md {
+    padding: 58px 0 100px;
+  }
+
+  @screen lg {
+    padding: 78px 0 110px;
+  }
+
+  &-main {
+    @apply text-center text-black relative;
+    line-height: 1.575;
+
+    &::before {
+      content: "";
+      background: url(../images/quote-1.svg) no-repeat;
+      background-size: cover;
+      width: 88px;
+      height: 75px;
+      position: absolute;
+      left: -10px;
+      top: -35px;
+
+      @screen md {
+        width: 166px;
+        height: 141px;
+        left: -20px;
+        top: -64px;
+      }
+    }
+
+    @screen md {
+      @apply text-30;
+    }
+
+    @screen lg {
+      max-width: 920px;
+      @apply mx-auto;
+    }
+
+    p {
+      @apply mb-5;
+
+      @screen md {
+        @apply mb-6;
+      }
+
+      @screen lg {
+        @apply mb-9;
+      }
+
+      strong {
+        @apply text-26 font-medium;
+
+        @screen md {
+          @apply text-36;
+        }
+      }
+
+    }
+  }
+
+  &-foot {
+    @apply flex items-center text-left justify-center;
+
+    >img {
+      min-width: 73px;
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+
+    h4 {
+      line-height: 27px;
+      margin-bottom: 4px;
+      @apply text-22 text-black;
+    }
+
+    span {
+      @apply text-16 block;
+      line-height: 27px;
+    }
+  }
+}
+
+.contact-next {
+  @apply bg-lightblue;
+  padding: 41px 0 30px;
+
+  @screen md {
+    padding: 73px 0 62px;
+  }
+
+  @screen lg {
+    border-top-left-radius: 100px;
+    padding: 78px 0;
+  }
+
+  &-head {
+    @apply text-center mb-11;
+
+    @screen lg {
+      margin-bottom: 71px;
+    }
+
+    h2 {
+      @screen md {
+        @apply text-56 mb-2.5;
+      }
+    }
+
+    p {
+      @apply text-primary;
+
+      @screen md {
+        @apply text-18;
+      }
+    }
+  }
+
+  &-items {
+    @screen md {
+      @apply px-16;
+    }
+
+    @screen lg {
+      @apply flex -mx-5 px-0;
+    }
+  }
+
+  &-item {
+    margin-bottom: 26px;
+
+    @screen lg {
+      @apply w-1/3 px-5;
+
+      &-in {
+        max-width: 352px;
+      }
+    }
+
+    @screen lgd {
+      @apply text-center;
+    }
+
+    h3 {
+      line-height: 1;
+      @apply text-28 mb-3;
+
+      @screen md {
+        @apply text-44 text-primary;
+        margin-bottom: 27px;
+      }
+    }
+
+    p {
+      @apply text-secondary;
+
+      @screen md {
+        @apply text-24;
+      }
+    }
+  }
+
+}
+
+.contact-form {
+  @apply bg-primary;
+  padding: 46px 0 65px;
+
+  @screen mdd {
+    @apply relative z-10;
+  }
+
+  @screen md {
+    padding: 91px 0 68px;
+  }
+
+  @screen lg {
+    padding: 89px 0 124px;
+    border-bottom-right-radius: 100px;
+    @apply relative;
+
+    &::after {
+      content: "";
+      height: 100px;
+      z-index: -1;
+      @apply absolute bottom-0 left-0 w-full;
+      background-color: #F2F5FB;
+    }
+
+    .path-anim-main {
+      @apply absolute left-0 top-0 w-full h-full
+    }
+  }
+
+  &-main {
+    @screen md {
+      @apply px-16;
+    }
+
+    @screen lg {
+      padding: 0 0 113px;
+      @apply relative;
+    }
+
+    h2 {
+      @apply text-orange text-32 text-center;
+      line-height: .94;
+      margin-bottom: 37px;
+
+      @screen md {
+        @apply text-100;
+        margin-bottom: 56px;
+      }
+
+      @screen lg {
+        margin-bottom: 34px;
+      }
+
+      span {
+        @apply block;
+
+        @screen md {
+          @apply text-71;
+        }
+      }
+    }
+
+    @screen lg {
+      max-width: 740px;
+      @apply mx-auto;
+    }
+  }
+
+  .gform_wrapper.gravity-theme {
+    .slider-display {
+      background-color: #2D2F3D;
+
+      .noUi-base {
+        background-color: #494B5F;
+
+        &::after {
+          background-color: #494B5F;
+        }
+      }
+    }
+
+    .gfield {
+      h3 {
+        color: #818495;
+      }
+
+      .gfield_label {
+        @apply text-white;
+      }
+
+      .gfield_checkbox {
+        label {
+          @apply text-white;
+        }
+      }
+
+      .iti {
+        .iti__flag-container {
+          background: #2D2F3D;
+          border-color: #282933;
+          color: #929292;
+        }
+
+        input {
+          background: #2D2F3D;
+          border-color: #282933;
+        }
+      }
+    }
+
+    .cs-file {
+      .gfield_label {
+        color: #818495;
+        @apply z-10;
+      }
+
+      .ginput_container_fileupload {
+        &::before {
+          color: #818495;
+          border-color: #282933;
+          background: #2D2F3D;
+        }
+      }
+
+      &-selected-val {
+        color: #929292;
+      }
+    }
+
+    input[type="color"],
+    input[type="date"],
+    input[type="datetime-local"],
+    input[type="datetime"],
+    input[type="email"],
+    input[type="month"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="text"],
+    input[type="time"],
+    input[type="url"],
+    input[type="week"],
+    select,
+    textarea {
+      color: #929292;
+      background: #2D2F3D;
+      border-color: #282933;
+
+      &::-webkit-input-placeholder {
+        color: #818495;
+      }
+
+      &:-ms-input-placeholder {
+        color: #818495;
+      }
+
+      &::placeholder {
+        color: #818495;
+      }
+    }
+  }
+}
+
+.service-list-check {
+  @screen mdd {
+    display: none !important;
+  }
+}
+
+.service-list-select {
+  @screen md {
+    @apply hidden
+  }
+}

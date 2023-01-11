@@ -1,0 +1,98 @@
+.tcci-block{
+    margin: 0 -1.25rem;
+    padding: 40px 1.25rem 44px;  
+    
+    @screen md {
+        padding-bottom: 76px;
+        padding-top: 96px;
+        margin: 0 -2.5rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    @media (min-width:1317px){
+        margin-left: calc((100vw - 1236px) * -0.5);
+        margin-right: calc((100vw - 1236px) * -0.5);
+        padding-right: calc((100vw - 1236px) * 0.5);
+        padding-left: calc((100vw - 1236px) * 0.5);
+    }
+   &-main{
+       @apply flex items-center flex-wrap -mx-5;
+       .block-alignright &{
+           @apply flex-row-reverse;
+       }
+   }
+   &-left{
+       @apply w-full px-5;
+       @screen lg {
+           @apply w-1/2 text-20;
+       }
+       h2{
+            @apply text-primary text-32 mb-3;
+            line-height: .94;
+            @screen md {
+            @apply text-100;
+            }
+        }
+        h3{
+            @apply text-32 text-primary mb-6;
+            line-height: 0.94;
+            @screen md {
+                @apply text-42;
+            }
+            @screen lg {
+                @apply text-56 leading-tight ;
+            }
+        }
+        p{
+            @apply mb-8;
+        }
+        ul{
+            @apply pl-0 list-none mb-8;
+            li{
+                padding-left: 35px;
+                @screen lg {
+                    padding-left: 48px;
+                }
+                @apply relative;
+                &:not(:last-child){
+                    margin-bottom: 15px;
+                }
+                &::before{
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    @apply border-4 border-orange rounded-full absolute left-0;
+                    top: 4px;
+                }
+            }
+        }
+        ol{
+            @apply  mb-8;
+            counter-reset: number;
+            li{
+                padding-left: 30px;
+                counter-increment: number;
+                @apply relative;
+                &:not(:last-child){
+                    margin-bottom: 15px;
+                }
+                &::before{
+                    content: counter(number);
+                    @apply text-orange font-medium absolute left-0;
+                    top: 1px;               
+                }
+            } 
+        }
+   }
+   &-right{
+    @apply w-full px-5;
+    @screen lg {
+        @apply w-1/2;
+    }
+    img{
+        @apply inline-block;
+        border-radius: 60px 0;
+    }
+}
+   
+}

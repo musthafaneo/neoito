@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "Rift";
+  src: url("fonts/Rift-Medium.woff2") format("woff2"),
+    url("fonts/Rift-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* @font-face {
+  font-family: "Rift";
+  src: url("fonts/Rift-Bold.woff2") format("woff2"),
+    url("fonts/Rift-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rift";
+  src: url("fonts/Rift-Demi.woff2") format("woff2"),
+    url("fonts/Rift-Demi.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+} */
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-Medium.woff2") format("woff2"),
+    url("fonts/Outfit-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-Regular.woff2") format("woff2"),
+    url("fonts/Outfit-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-Bold.woff2") format("woff2"),
+    url("fonts/Outfit-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* @font-face {
+  font-family: "Outfit";
+  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap") ,
+    url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap") ;
+  
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rift";
+  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap") ,
+    url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap") ;
+  
+  font-style: normal;
+  font-display: swap;
+} */

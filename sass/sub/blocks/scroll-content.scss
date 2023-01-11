@@ -1,0 +1,42 @@
+.sl-cnt-block{
+    margin: 0 -1.25rem;
+    padding: 40px 1.25rem 44px;  
+    @screen md {
+        padding-bottom: 60px;
+        padding-top: 60px;
+        margin: 0 -2.5rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    @screen lg{
+        padding-bottom: 96px;
+        padding-top: 96px;
+        @apply relative;            
+    }
+
+    @media (min-width:1317px){
+        margin-left: calc((100vw - 1236px) * -0.5);
+        margin-right: calc((100vw - 1236px) * -0.5);
+        padding-right: calc((100vw - 1236px) * 0.5);
+        padding-left: calc((100vw - 1236px) * 0.5);
+    }
+    .home-solutions-head{
+        @apply mb-10;
+        @screen lg {
+            padding-right: calc((100vw - 1236px) * 0.5);
+        }
+        h2,p{
+            @screen xl{
+                width: 38.062%;
+            } 
+            @media (min-width:1712px){
+                width: 30%;
+            }
+            @media (min-width:2103px){
+                width: 28%;
+                max-width: 493px;
+            }
+        }
+    }
+
+}

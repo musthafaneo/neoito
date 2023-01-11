@@ -1,0 +1,116 @@
+.faq-block{
+    @apply -mx-5 px-5  py-8 relative;
+    
+    @screen md {
+        @apply -mx-10 pl-10 pr-10;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @screen lg {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+    @media (min-width:1317px){
+        margin-left: calc((100vw - 1236px) * -0.5);
+        margin-right: calc((100vw - 1236px) * -0.5);
+        padding-right: calc((100vw - 1236px) * 0.5);
+        padding-left: calc((100vw - 1236px) * 0.5);
+    }
+    
+    h2{
+        @apply text-center;
+        @screen md {
+            margin-bottom: 10px;
+        }
+        @screen lg {
+            margin-bottom:  34px;
+        }
+    }
+}
+.faq{
+    &-items{
+        max-width: 974px;
+        @apply mx-auto;
+        counter-reset: number;
+    }
+    &-item{        
+        border-bottom: 1px solid #C2D5FC;
+        counter-increment: number;
+        &-title{
+            padding-left: 36px;
+            @screen lg {
+                padding-left: 54px; 
+            }
+            @apply relative py-6 cursor-pointer;
+            h3{
+                @apply font-sans text-20 text-primary m-0 font-normal;
+                line-height: 1.36;
+                @screen lg {
+                    @apply text-28;
+                }
+                &::before{
+                    content: counter(number) ". ";                    
+                }                
+            }
+            span{
+                width: 20px;
+                height: 20px;
+                @apply bg-lightblue rounded-full absolute left-0;
+                top: 26px;
+                @screen lg {
+                    width: 30px;
+                    height: 30px;
+                    top: 28px;
+                }
+                &::before{
+                    content: "";
+                    width: 8px;
+                    height: 2px;
+                    top: 9px;
+                    left: 6px;
+                    @apply absolute bg-orange;
+                    @screen lg {                        
+                        top: 14px;
+                        left: 8px;
+                        width: 14px;
+                    }
+                }
+                &::after{
+                    content: "";
+                    width: 2px;
+                    height: 8px;
+                    top: 6px;
+                    left: 9px;
+                    @apply absolute bg-orange transition-all duration-300;
+                    @screen lg {                        
+                        left: 14px;
+                        top: 8px;
+                        height: 14px;
+                    }
+                }
+            }
+            &.on{
+                span::after{
+                    @apply opacity-0;
+                }
+            }
+        }
+        &-content{
+            @apply pb-6 hidden text-secondary;
+            padding-left: 36px;
+            @screen lg {
+                padding-left: 54px; 
+            }
+            line-height: 1.4;
+            @screen lg {
+                @apply text-20;
+            }
+            p{
+                @apply mb-4;
+                &:last-child{
+                    @apply mb-0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,71 @@
+.stats-block{
+    margin: 0 -1.25rem;
+    padding: 40px 1.25rem 44px;  
+    @screen md {
+        padding-bottom: 45px;
+        padding-top: 60px;
+        margin: 0 -2.5rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    @screen lg{
+        padding-bottom: 96px;
+        padding-top: 96px;
+        @apply relative;            
+    }
+
+
+    @media (min-width:1317px){
+        margin-left: calc((100vw - 1236px) * -0.5);
+        margin-right: calc((100vw - 1236px) * -0.5);
+        padding-right: calc((100vw - 1236px) * 0.5);
+        padding-left: calc((100vw - 1236px) * 0.5);
+    }
+
+    .home-stats-item{
+        &s{
+            @screen lgd {
+                @apply grid-rows-2;
+            }
+        }
+        &-in{
+            span{
+                @apply block mb-3;
+            }
+            h3{
+                @apply text-34 mb-px;
+                @screen md {
+                    @apply text-55;
+                }
+            }
+            p {
+                line-height: 1.107;
+                @apply text-15 mb-0;
+                @screen md {
+                  @apply text-28;
+                }
+                @screen lg {
+                  line-height: 31px;
+                  @apply text-32;
+                }
+              }
+        }
+        @screen lg {
+            &-1{
+                width: 55%;
+            }
+            &-2{
+                width: 45%;
+            }
+            &-3, &-4{
+                @apply w-1/2
+            }
+        }
+        @screen lg {
+            &-4{
+                @apply row-span-1;
+            }
+        }
+    }
+
+}

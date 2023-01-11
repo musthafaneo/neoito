@@ -1,0 +1,121 @@
+.other-service-block{
+    @apply -mx-5 px-5  py-8 relative;
+    
+    @screen md {
+        @apply -mx-10 pl-10 pr-10;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @screen lg {
+        padding-top: 96px;
+        padding-bottom: 161px;
+    }
+    @media (min-width:1317px){
+        margin-left: calc((100vw - 1236px) * -0.5);
+        margin-right: calc((100vw - 1236px) * -0.5);
+        padding-right: calc((100vw - 1236px) * 0.5);
+        padding-left: calc((100vw - 1236px) * 0.5);
+    }
+    &-main{
+        @screen lg {
+            @apply flex flex-wrap;
+        }
+        p{
+            @apply text-secondary text-18 mb-7;
+            @screen lg {
+                max-width: 670px;
+                @apply mx-auto text-28;
+                margin-bottom: 43px;
+            }  
+        }
+    }
+    &-left{
+        @screen lgd {
+            @apply mb-10 text-center;
+        }
+        @screen lg {
+            width: 263px;
+            margin-top: 69px;
+            .button{
+                min-width: 224px;
+                @apply px-0;
+            }
+            h2{
+                margin-right: -100px;
+            }
+        }
+    }
+    &-right{
+        @screen lg {
+            width: calc(100% - 263px);
+            @apply bg-lightblue;
+            border-radius: 60px 10px;
+            padding: 100px 45px 0;
+        }        
+    }
+    &-items{
+        @apply flex flex-wrap;
+        @screen lgd {
+            @apply -mx-2;
+        }
+    }
+    &-item{
+        @apply w-1/2 flex;
+        @screen lgd {
+            @apply px-2;
+        }
+        @screen md{
+            @apply w-1/4;
+        }
+        &-in{
+            @apply flex flex-col;
+            @screen lgd {
+                @apply bg-lightblue;
+            }
+            border-radius: 30px;
+            @apply transition-all duration-300 mb-5 px-5 py-8;
+            
+           
+            @screen lg {
+                padding: 38px 36px 64px;
+                margin-bottom: -64px;
+                
+            }
+            .wp-svg-img{
+                width: 67px;
+                height: 67px;
+                @apply block mb-5 transition-all duration-300 bg-white flex items-center justify-center;
+                border-radius: 20px 5px;
+                @screen lgd {
+                    transform: scale(0.8);
+                    transform-origin: left center;
+                }
+                svg{
+                    @apply fill-orange;
+                }
+            }
+            h3{
+                @apply text-20;
+                @screen lg {
+                    @apply text-26 mb-11;
+                }
+            }
+            .v-more{
+                @apply hidden;
+                @screen lg {
+                    @apply transition-all duration-300 text-orange block opacity-0 font-medium;
+                }
+            }   
+            &:hover{
+                @apply bg-white;
+                box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.12);
+                .v-more{
+                    @apply opacity-100;
+                }
+                .wp-svg-img{
+                    @apply bg-lightblue;
+                }
+            }
+        }             
+    }
+}

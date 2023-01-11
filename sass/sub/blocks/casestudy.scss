@@ -1,0 +1,32 @@
+.casestudy-block{
+    @apply  py-8 relative;
+    
+    @screen md {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @screen lg {
+        padding-top: 96px;
+        padding-bottom: 99px;
+    }
+    h2 {
+        margin-bottom: 24px;
+        @screen md {
+          margin-bottom: 40px;
+        }
+        @screen lg {
+          margin-bottom: 57px;
+        }
+      }
+    .carousel-footer {
+        margin-top: 61px;
+        @apply relative z-10;
+        @screen md {
+          margin-top: 80px;
+        }
+        @screen lg {
+          @apply w-1/2 ml-auto absolute right-0 m-0;
+          top: -120px;
+        }
+      }
+}

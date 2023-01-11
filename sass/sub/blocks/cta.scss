@@ -1,0 +1,36 @@
+.cta-block{
+    margin: 40px -1.25rem 0;
+    padding: 40px 1.25rem 44px; 
+    @apply bg-orange text-center;
+
+    @screen md{
+        padding-bottom: 76px;
+        padding-top: 96px;
+        margin: 0 -2.5rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        margin-top: 96px;
+    }
+    @screen lg{
+        border-radius: 100px 0;
+    }
+    @media (min-width:1317px){
+        margin-left: calc((100vw - 1236px) * -0.5);
+        margin-right: calc((100vw - 1236px) * -0.5);
+        padding-right: calc((100vw - 1236px) * 0.5);
+        padding-left: calc((100vw - 1236px) * 0.5);
+    }
+    h2{
+        @apply  mb-6 text-white text-32;
+        line-height: 0.94;
+        @screen md{
+            @apply text-80;
+        }
+        @screen lg{
+            @apply mb-9 text-100;
+        }
+    }
+
+
+   
+}

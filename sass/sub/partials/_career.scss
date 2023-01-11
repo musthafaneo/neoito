@@ -1,0 +1,416 @@
+.career-banner {
+    background: linear-gradient(180deg, #e7f1f7 0%, rgba(231, 241, 247, 0) 100%);
+    padding: 147px 0 146px;
+    @screen md {
+      padding: 200px 0 40px;
+    }
+    @screen lg {
+      padding: 174px 0 221px;
+    }
+    &-main {
+      @apply relative;
+      @screen lg {
+        @apply flex items-end justify-between -mx-4;
+      }
+    }
+    &-left {
+      @apply relative;
+      @screen lg {
+        width: 53%;
+        @apply px-4;
+      }
+    }
+    &-right {
+      @screen lg {
+        width: 47%;
+        @apply px-4;
+      }
+      @screen lgd{
+          @apply mt-5;
+      }
+      img{
+          @apply inline-block;
+      }
+    }
+    h1 {
+      @apply mb-6;
+    }
+    p {
+      @apply text-secondary text-22 mb-11;
+      @screen md {
+        @apply text-32 mb-14;
+        line-height: 1.54;
+      }
+    }
+    .scroll-svg {
+      @apply right-0;
+      bottom: -210px;
+    }
+  }
+  .career-ww{
+    padding: 64px 0;
+    @screen md {
+      padding: 114px 0;
+    }
+    @screen lgd {
+        @apply bg-lightblue;
+    }
+    @screen lg {
+      padding: 127px 0 188px;
+      @apply relative;
+      svg {
+        @apply absolute w-full left-0 right-0 bottom-0;
+      }
+    }
+    &-main{
+        @apply text-center text-secondary;
+        @screen md {
+            @apply text-18;
+        }
+        @screen lg {
+            max-width: 817px;
+            @apply mx-auto;
+        } 
+    }
+
+}
+.career-listing{
+    padding: 58px 0 50px;
+    @screen md {
+      padding: 100px 0 90px;
+    }
+    @screen lg {
+      padding: 80px 0 70px;
+    }
+    h2{
+        @apply mb-10;
+    }
+    .load-more{
+        @apply pt-16;
+        a{
+            @apply underline text-black;
+            &:hover, &:focus{
+                @apply text-orange;
+            }
+        }
+    }
+    &-items{}
+    &-item{
+        @apply mb-4 border overflow-hidden;
+        border-color: #E9EAEA;
+        border-radius: 8.5px;
+        @screen md {
+            @apply mb-7;
+        }
+        &-main{
+            @apply p-4;
+            @screen md {
+                @apply p-6;
+            }
+            @screen lg {
+                @apply px-6 py-7 flex items-start justify-between; 
+            }
+        }
+        &-in{
+            @apply text-secondary text-15 mb-3;
+            @screen md {
+                @apply mb-4;
+            }
+            @screen lg {
+                width: calc(100% - 300px);
+                @apply mb-0;
+            }
+            h3{
+                @apply text-25 mb-3 text-primary;
+                line-height: 1;
+            }
+        }
+        &-footer{
+            @apply p-4 flex items-center justify-between border-t;
+            border-color: #E9EAEA;
+            background: #F8F8F8;
+            ul{
+                @apply flex items-center gap-2;
+                li{
+                    padding: 6px 8px;
+                    background: #9194AF;
+                    border-radius: 4.25px;
+                    @apply text-white text-13 font-medium;
+                    line-height: 1;
+                }
+            }
+            span{
+                @apply flex items-center text-primary text-13;
+                line-height: 1;
+                svg{
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+  }
+  .career-resume{
+      &-main{
+          @apply relative overflow-hidden text-white;
+          border-radius: 20px 0 20px 0;
+          > img{
+              @apply absolute left-0 top-0 w-full h-full object-cover;
+          }
+          padding: 56px 15px 64px;
+          @screen md {
+            padding: 100px 50px; 
+          }
+          @screen lg {
+            padding: 83px 40px; 
+          }
+          &::after{
+              content: "";
+              @apply absolute inset-0;
+              background-color: rgba(#090808, 0.68);
+          }
+          h2{
+              @apply text-white
+          }
+          p{
+              @apply mb-8;
+            @screen md {
+                @apply text-18;
+            } 
+            @screen md {
+                @apply mb-4;
+            }
+          }
+      }
+      &-in{
+          @apply relative z-10 text-center;
+        @screen lg {
+            @apply mx-auto;
+            max-width: 624px;
+        } 
+      }
+      .gform_wrapper.gravity-theme {
+          form{
+              @apply relative;
+          }
+          .cs-file{
+            .ginput_container_fileupload {
+                &::before {
+                    border-color: #DEDEDE;
+                    padding-left: 42px;
+                    color: #fff;
+                    @screen lg {
+                        padding-right: 157px;
+                    }
+                }
+                &::after {
+                    background-image: url(../images/file-alt.svg);
+                    left: 14px;
+                    right: auto;
+                }
+            }
+            &-selected-val, .gfield_label {
+                padding-left: 42px;
+                color: #fff;
+                @screen lg {
+                    padding-right: 157px;
+                }
+            }
+          }
+          .gfield_validation_message {
+            @screen lg {
+                padding-right: 140px;
+            }
+          }
+          .gform_button.button{
+              @apply bg-white text-orange border-white;
+              @screen lg {
+                  width: 137px;
+                  min-width: 137px;
+                  height: 47px;
+                  @apply absolute right-px top-px;
+                  z-index: 11;
+              }
+              &:hover, &:focus{
+                  @apply bg-orange border-orange text-white;
+              }
+          }
+          .gform_footer{
+              @apply m-0 pt-4;
+                @screen md {
+                    @apply pt-9;
+                }
+            @screen lg {
+                @apply p-0;
+            }
+          }
+      }
+  }
+  .career-attractions{
+    padding: 70px 0 36px;
+    @screen md {
+      padding: 90px 0 2px;
+    }
+    @screen lg {
+      padding: 101px 0 18px;
+    }
+    &-items{
+        @screen md {
+            @apply px-11;
+        }
+        @screen lg {
+             @apply flex flex-wrap -mx-3 px-0;
+        }
+    }
+    &-item{
+        @apply mb-5 text-primary;
+        @screen md {
+            margin-bottom: 35px;
+        }
+        @screen lg {
+            @apply w-1/3 px-3 mb-6 flex;
+        }
+        &-in{
+            background: #F6F6F7;
+            padding: 68px 21px;
+            @screen lgd {
+                border-radius: 18px;
+            }
+            @screen md {
+                padding: 80px 50px;
+            }
+            @screen lg {
+                padding: 70px 28px 47px;
+                @apply flex flex-col grow;
+            }
+            span{
+                @apply mb-8 block;
+                @screen md {
+                    margin-bottom: 55px;
+                }
+                @screen lg {
+                    @apply mb-8;
+                }
+            }
+            h3{
+                line-height: 1.2;
+                margin-bottom: 5px;
+                @apply text-32;
+                @screen md {
+                    @apply text-58;
+                }
+                @screen lg {
+                    @apply text-32;
+                } 
+            }
+            p{
+                @screen md {
+                    @apply text-30;
+                }
+                @screen lg {
+                    @apply text-18
+                }
+            }
+        }
+        @screen lg {
+            &:nth-child(1) .career-attractions-item-in{
+                border-top-left-radius: 40px;
+            }
+            &:nth-child(3) .career-attractions-item-in{
+                border-top-right-radius: 16px;
+            }
+            &:nth-child(4) .career-attractions-item-in{
+                border-bottom-left-radius: 16px;
+            }
+            &:nth-child(6) .career-attractions-item-in{
+                border-bottom-right-radius: 40px;
+            }
+        }
+    }
+  }
+  .employee-testi{
+    padding: 38px 0 57px;
+    @screen md {
+      padding: 45px 0 106px;
+    }
+    @screen lg {
+      padding: 42px 0 102px;
+      @apply relative;
+    }
+    .about-team-head{
+        @screen lg {
+            width: 27%;
+        }
+    }
+    .carousel {
+        &-main {
+            @screen lgd {
+              @apply relative;
+            }
+          }
+          &-footer {
+            @apply relative z-10;
+            @screen md {
+              @apply absolute;
+              width: calc(100% - 343px);
+              right: 0;
+              top: 312px;
+            }
+            @screen lg {
+              top: 53px;
+              width: 67%;
+              right: 40px;
+            }
+            @screen mdd {
+              margin-top: 30px;
+              @apply flex-row mr-0 -ml-5;
+            }
+          }
+    }
+  }
+  .career-community{
+      background-color: #F2F5FB;
+      padding: 55px 0 90px;
+      @screen md {
+        padding: 160px 0;
+      }
+      @screen lg {
+        padding: 47px 0 82px;
+        border-radius: 100px 100px 0 0;
+      }
+      &-main{
+          @apply text-primary;
+        @screen lg {
+            padding: 53px 0 37px;
+            @apply flex items-center relative;
+            &::before{
+                content: "";
+                @apply absolute top-0;
+                width: 842px;
+                height: 693px;
+                left: -119px;
+                background: url(../images/surface.svg) no-repeat
+            }
+        } 
+      }
+      &-left{
+        @screen lgd {
+            @apply text-center relative;
+        }
+        @screen lg {
+            width: 54%;
+        } 
+        p{
+            margin-bottom: 30px;
+            @screen md {
+                @apply text-18;
+                margin-bottom: 57px;
+            }
+        }
+      }
+      &-right{
+        @screen lg {
+            width: 46%;
+            @apply flex justify-end relative;
+        } 
+      }
+  }

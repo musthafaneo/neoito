@@ -1,0 +1,107 @@
+.bg-lines {
+  span {
+    @apply fixed h-full w-px top-0;
+    mix-blend-mode: multiply;
+    background-color: #eee;
+    z-index: -1;
+    min-height: var(--app-height);
+
+    &::before {
+      content: "";
+      @apply absolute top-0 left-0 w-full;
+      height: 30vh;
+      background: linear-gradient(
+        180deg,
+        rgba(243, 109, 69, 0) 0%,
+        rgba(243, 109, 69, 1) 50%,
+        rgba(243, 109, 69, 0) 100%
+      );
+      box-shadow: 0px 35px 9px rgba(243, 109, 69, 0.43);
+      animation: MoveUpDown 3s linear infinite;
+    }
+
+    &:nth-child(1) {
+      @screen md {
+        left: 33px;
+      }
+      @media (min-width: 1397px) {
+        left: calc(((100vw - 1236px) * 0.5) + 45px);
+      }
+
+      @screen mdd {
+        left: 43px;
+      }
+    }
+    &:nth-child(2) {
+      &::before {
+        animation-duration: 6.5s;
+      }
+      @screen md {
+        left: calc(20% + 19px);
+      }
+      @media (min-width: 1397px) {
+        left: calc(((100vw - 1236px) * 0.5) + 273px);
+      }
+
+      @screen mdd {
+        left: 50%;
+      }
+    }
+    &:nth-child(3) {
+      &::before {
+        animation-duration: 4s;
+      }
+      @screen md {
+        left: calc(40% + 7px);
+      }
+      @media (min-width: 1397px) {
+        left: calc(((100vw - 1236px) * 0.5) + 502px);
+      }
+
+      @screen mdd {
+        right: 43px;
+      }
+    }
+    &:nth-child(4) {
+      &::before {
+        animation-duration: 7s;
+      }
+      @screen md {
+        left: calc(60% - 7px);
+      }
+      @media (min-width: 1397px) {
+        right: calc(((100vw - 1236px) * 0.5) + 502px);
+        left: auto;
+      }
+    }
+    &:nth-child(5) {
+      &::before {
+        animation-duration: 6s;
+      }
+      @screen md {
+        left: calc(80% - 19px);
+      }
+      @media (min-width: 1397px) {
+        right: calc(((100vw - 1236px) * 0.5) + 273px);
+        left: auto;
+      }
+    }
+    &:nth-child(6) {
+      @screen md {
+        right: 33px;
+      }
+      @media (min-width: 1397px) {
+        right: calc(((100vw - 1236px) * 0.5) + 45px);
+      }
+    }
+  }
+}
+
+@keyframes MoveUpDown {
+  0% {
+    top: -30vh;
+  }
+  100% {
+    top: 100%;
+  }
+}
